@@ -271,7 +271,26 @@ console.log('Cuisine: ', cuisineAndName)
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
 
+function problemEight(){
 
+    let results = dishes.filter(function(el) {
+        if(el.cuisine === "Vegetarian") {
+            return true
+        }
+        else{
+            return false
+        }
+    })
+
+    let finalResults = results.map(function(el){
+        return el.cuisine + " " + el.name
+    })
+
+    return finalResults
+}
+
+let vegetarianSelections = problemEight()
+console.log('Vegetarian Menu: ', vegetarianSelections)
 
 
 //BONUS
