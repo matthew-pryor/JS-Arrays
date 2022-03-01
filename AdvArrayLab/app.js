@@ -323,9 +323,22 @@ console.log("Chickpea Dishes: ", chickpeaDishes)
 
 function problemTen(){
 
-    let results = dishes.
+    let servingsList = []
+  
+    for(const dish of dishes) {
+
+        servingsList.push(dish.servings)}
+
+    let results = servingsList.reduce(function(total, element){
+        return total + element
+    })
+
+    return results
 
 }
+
+totalServings = problemTen()
+console.log(totalServings)
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
 
